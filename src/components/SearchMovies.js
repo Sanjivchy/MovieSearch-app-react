@@ -31,7 +31,7 @@ export default function SearchMovies(){
                     placeholder="i.e. Jurassic Park"
                     value={query} onChange={(e) => setQuery(e.target.value)}
                     />
-                <button className="button" type="submit">Search</button>
+                <button className="button" disabled={!query} type="submit">Search</button>
             </form>
             <div className="card-list">
                 {movies.filter(movie => movie.poster_path).map(movie => (
